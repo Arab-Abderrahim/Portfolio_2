@@ -14,7 +14,7 @@ export function Footer() {
                 <div className="grid md:grid-cols-3 gap-8 mb-8">
                     <div>
                         <h3 className="font-heading font-bold text-xl mb-4 gradient-text">
-                            Creative Developer
+                            Arab Abderrahim
                         </h3>
                         <p className="text-muted-foreground text-sm">
                             Building exceptional digital experiences with modern web technologies.

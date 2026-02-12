@@ -369,7 +369,7 @@ export function Hero() {
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ delay: 0.3, type: 'spring' }}
                         >
-                            <span className="gradient-text">Creative Developer</span>
+                            <span className="gradient-text">Arab Abderrahim</span>
                         </motion.h1>
                         <motion.p
                             className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8"
