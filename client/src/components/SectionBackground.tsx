@@ -17,7 +17,7 @@ export function SectionBackground() {
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 via-indigo-50/50 to-purple-50 opacity-100 dark:opacity-0 transition-opacity duration-500 pointer-events-none" />
 
             {/* Light Mode Specific Orbs (Hidden in Dark Mode) */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-100 dark:opacity-0 transition-opacity duration-300">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-100 dark:opacity-0 transition-opacity duration-300 hidden md:block">
                 <motion.div
                     className="absolute top-20 right-20 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl mix-blend-multiply"
                     animate={{
@@ -73,7 +73,7 @@ export function SectionBackground() {
             </div>
 
             {/* Enhanced gradient orbs */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none transition-colors duration-300">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none transition-colors duration-300 hidden md:block">
                 <motion.div
                     className="absolute top-1/4 -left-48 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
                     animate={{
@@ -103,7 +103,7 @@ export function SectionBackground() {
             </div>
 
             {/* Floating particles */}
-            <div className="absolute inset-0 pointer-events-none transition-opacity duration-300">
+            <div className="absolute inset-0 pointer-events-none transition-opacity duration-300 hidden md:block">
                 {particles.map((particle) => (
                     <motion.div
                         key={particle.id}

@@ -78,7 +78,7 @@ export function Hero() {
             </div>
 
             {/* Enhanced gradient orbs - Repositioned for mobile */}
-            <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 overflow-hidden hidden md:block">
                 <motion.div
                     className="absolute top-1/4 -left-20 md:-left-48 w-64 md:w-96 h-64 md:h-96 bg-primary/20 rounded-full blur-3xl"
                     animate={{
@@ -119,7 +119,7 @@ export function Hero() {
             </div>
 
             {/* Floating particles */}
-            <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 pointer-events-none hidden md:block">
                 {particles.map((particle) => (
                     <motion.div
                         key={particle.id}
@@ -179,7 +179,7 @@ export function Hero() {
 
                                 {/* Icon */}
                                 <motion.div
-                                    className="relative z-10 w-8 h-8 rounded-full flex items-center justify-center bg-background/90 backdrop-blur-sm border border-border shadow-lg"
+                                    className="relative z-10 w-8 h-8 rounded-full flex items-center justify-center bg-background md:bg-background/90 md:backdrop-blur-sm border border-border md:shadow-lg"
                                     animate={{
                                         y: [0, -8, 0],
                                         rotate: [0, -360],
@@ -246,7 +246,7 @@ export function Hero() {
 
                                 {/* Icon */}
                                 <motion.div
-                                    className="relative z-10 w-10 h-10 rounded-full flex items-center justify-center bg-background/90 backdrop-blur-sm border-2 shadow-xl"
+                                    className="relative z-10 w-10 h-10 rounded-full flex items-center justify-center bg-background md:bg-background/90 md:backdrop-blur-sm border-2 md:shadow-xl"
                                     style={{ borderColor: color + '40' }}
                                     animate={{
                                         y: [0, -12, 0],
