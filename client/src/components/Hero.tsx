@@ -170,7 +170,7 @@ export function Hero() {
                                 className="relative group"
                             >
                                 {/* Glow effect */}
-                                <div className="absolute inset-0 rounded-full blur-xl opacity-40" style={{
+                                <div className="absolute inset-0 rounded-full blur-xl opacity-40 hidden md:block" style={{
                                     background: `radial-gradient(circle, ${color}40, transparent)`,
                                     width: '48px',
                                     height: '48px',
@@ -237,7 +237,7 @@ export function Hero() {
                                 </svg>
 
                                 {/* Glow effect */}
-                                <div className="absolute inset-0 rounded-full blur-xl opacity-50" style={{
+                                <div className="absolute inset-0 rounded-full blur-xl opacity-50 hidden md:block" style={{
                                     background: `radial-gradient(circle, ${color}60, transparent)`,
                                     width: '56px',
                                     height: '56px',
@@ -291,7 +291,7 @@ export function Hero() {
             </div>
 
             {/* Outer Orbit - Slow rotating large icons */}
-            <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 pointer-events-none hidden md:block">
                 {outerOrbitIcons.map(({ Icon, color, name }, index) => {
                     const angle = (index * 360) / outerOrbitIcons.length + 45; // Offset by 45 degrees
                     const radius = 420;
