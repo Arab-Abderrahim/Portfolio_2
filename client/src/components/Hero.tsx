@@ -30,8 +30,8 @@ const outerOrbitIcons = [
     { Icon: SiVite, color: '#646CFF', name: 'Vite' },
 ];
 
-// Floating particles
-const particles = Array.from({ length: 50 }, (_, i) => ({
+// Floating particles - reduced count for performance
+const particles = Array.from({ length: 20 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
@@ -77,10 +77,10 @@ export function Hero() {
                 </div>
             </div>
 
-            {/* Enhanced gradient orbs */}
+            {/* Enhanced gradient orbs - Repositioned for mobile */}
             <div className="absolute inset-0 overflow-hidden">
                 <motion.div
-                    className="absolute top-1/4 -left-48 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+                    className="absolute top-1/4 -left-20 md:-left-48 w-64 md:w-96 h-64 md:h-96 bg-primary/20 rounded-full blur-3xl"
                     animate={{
                         x: [0, 100, 0],
                         y: [0, -50, 0],
@@ -93,7 +93,7 @@ export function Hero() {
                     }}
                 />
                 <motion.div
-                    className="absolute bottom-1/4 -right-48 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
+                    className="absolute bottom-1/4 -right-20 md:-right-48 w-64 md:w-96 h-64 md:h-96 bg-purple-500/20 rounded-full blur-3xl"
                     animate={{
                         x: [0, -100, 0],
                         y: [0, 50, 0],
@@ -106,10 +106,8 @@ export function Hero() {
                     }}
                 />
                 <motion.div
-                    className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500/15 rounded-full blur-3xl"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 md:w-96 h-64 md:h-96 bg-pink-500/15 rounded-full blur-3xl"
                     animate={{
-                        x: [-50, 50, -50],
-                        y: [-50, 50, -50],
                         scale: [1, 1.4, 1],
                     }}
                     transition={{

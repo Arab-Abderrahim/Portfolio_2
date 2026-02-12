@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
-// Floating particles
-const particles = Array.from({ length: 30 }, (_, i) => ({
+// Floating particles - reduced for performance
+const particles = Array.from({ length: 15 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,

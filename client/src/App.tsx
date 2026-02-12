@@ -1,13 +1,16 @@
+import { Suspense, lazy } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ThemeProvider } from './lib/theme-provider';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Projects } from './components/Projects';
-import { Services } from './components/Services';
-import { AvailableForWork } from './components/AvailableForWork';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+
+// Lazy load components for performance
+const Hero = lazy(() => import('./components/Hero').then(module => ({ default: module.Hero })));
+const About = lazy(() => import('./components/About').then(module => ({ default: module.About })));
+const Projects = lazy(() => import('./components/Projects').then(module => ({ default: module.Projects })));
+const Services = lazy(() => import('./components/Services').then(module => ({ default: module.Services })));
+const AvailableForWork = lazy(() => import('./components/AvailableForWork').then(module => ({ default: module.AvailableForWork })));
+const Contact = lazy(() => import('./components/Contact').then(module => ({ default: module.Contact })));
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -28,12 +31,18 @@ function App() {
 
                     {/* Main content */}
                     <main>
-                        <Hero />
-                        <About />
-                        <Projects />
-                        <Services />
-                        <AvailableForWork />
-                        <Contact />
+                        <Suspense fallback={
+                            <div className="flex items-center justify-center min-h-screen">
+                                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+                            </div>
+                        }>
+                            <Hero />
+                            <About />
+                            <Projects />
+                            <Services />
+                            <AvailableForWork />
+                            <Contact />
+                        </Suspense>
                     </main>
 
                     <Footer />

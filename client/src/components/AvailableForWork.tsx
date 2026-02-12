@@ -10,7 +10,7 @@ export function AvailableForWork() {
     };
 
     return (
-        <section className="section-padding relative overflow-hidden">
+        <section id="available" className="section-padding relative overflow-hidden">
             <SectionBackground />
 
             <div className="container-custom relative z-10">
