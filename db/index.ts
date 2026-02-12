@@ -2,7 +2,7 @@ import Database from 'better-sqlite3';
 import { drizzle } from 'drizzle-orm/better-sqlite3';
 import * as schema from './schema';
 
-const DATABASE_URL = process.env.DATABASE_URL || './portfolio_v3.db';
+const DATABASE_URL = process.env.DATABASE_URL || './portfolio_v4.db';
 
 const sqlite = new Database(DATABASE_URL);
 export const db = drizzle(sqlite, { schema });
@@ -66,32 +66,24 @@ export async function initializeDatabase() {
   // Insert sample projects
   db.insert(projects).values([
     {
-      title: 'Medical Application',
-      description: 'A comprehensive medical application for managing patient records and appointments',
-      longDescription: 'A secure and efficient system for doctors and patients to manage health records, appointments, and prescriptions. Built with compliance and usability in mind.',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=2070',
-      tags: JSON.stringify(['React', 'Node.js', 'PostgreSQL', 'HealthKit']),
+      title: 'E-Commerce Platform',
+      description: 'A full-stack e-commerce platform with real-time inventory management',
+      longDescription: 'Built with React, Node.js, and PostgreSQL. Features include user authentication, product catalog, shopping cart, payment integration with Stripe, and admin dashboard.',
+      image: '/images/projects/ecommerce.jpg',
+      tags: JSON.stringify(['React', 'Node.js', 'PostgreSQL', 'Stripe']),
+      githubUrl: 'https://github.com/Arab-Abderrahim/Tafaceel',
       featured: true,
     },
     {
-      title: 'Travello',
-      description: 'A frontend booking website inspired by Booking.com',
-      longDescription: 'A modern travel booking interface featuring search, property listings, and reservation management. Focuses on user experience and responsive design.',
-      image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=2074',
-      tags: JSON.stringify(['React', 'TypeScript', 'Tailwind CSS', 'Vite']),
-      featured: true,
-    },
-    {
-      title: 'Tafaceel',
-      description: 'Modern E-commerce Platform',
-      longDescription: 'A premium shopping experience with advanced filtering, cart management, and secure checkout. Built for scalability and performance.',
-      image: 'https://images.unsplash.com/photo-1472851294608-41551b116d4e?auto=format&fit=crop&q=80&w=2070',
-      tags: JSON.stringify(['Next.js', 'Stripe', 'Tailwind', 'PostgreSQL']),
+      title: 'OBLIVION',
+      description: 'Educational Network Scanner',
+      longDescription: 'OBLIVION is an educational, multi-threaded TCP network scanner written in C. It demonstrates core cybersecurity concepts such as socket programming, multithreading, concurrency control, banner grabbing, CIDR scanning, and structured data export.',
+      image: '/images/projects/taskapp.jpg',
+      tags: JSON.stringify(['C', 'JSON']),
+      githubUrl: 'https://github.com/Arab-Abderrahim/OBLIVION',
       featured: true,
     },
   ]).run();
 
-  console.log('Database initialized with new project data');
-
-  console.log('Database initialized with sample data');
+  console.log('Database initialized with project data');
 }

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function Footer() {
@@ -50,21 +50,23 @@ export function Footer() {
                     <div>
                         <h4 className="font-semibold mb-4">Connect</h4>
                         <div className="flex gap-2">
-                            <Button variant="ghost" size="icon" className="rounded-full">
-                                <Github className="h-5 w-5" />
-                                <span className="sr-only">GitHub</span>
+                            <Button variant="ghost" size="icon" className="rounded-full" asChild>
+                                <a href="https://github.com/Arab-Abderrahim" target="_blank" rel="noopener noreferrer">
+                                    <Github className="h-5 w-5" />
+                                    <span className="sr-only">GitHub</span>
+                                </a>
                             </Button>
-                            <Button variant="ghost" size="icon" className="rounded-full">
-                                <Linkedin className="h-5 w-5" />
-                                <span className="sr-only">LinkedIn</span>
+                            <Button variant="ghost" size="icon" className="rounded-full" asChild>
+                                <a href="https://www.linkedin.com/in/abderrahim-arab-aa3183319/" target="_blank" rel="noopener noreferrer">
+                                    <Linkedin className="h-5 w-5" />
+                                    <span className="sr-only">LinkedIn</span>
+                                </a>
                             </Button>
-                            <Button variant="ghost" size="icon" className="rounded-full">
-                                <Twitter className="h-5 w-5" />
-                                <span className="sr-only">Twitter</span>
-                            </Button>
-                            <Button variant="ghost" size="icon" className="rounded-full">
-                                <Mail className="h-5 w-5" />
-                                <span className="sr-only">Email</span>
+                            <Button variant="ghost" size="icon" className="rounded-full" asChild>
+                                <a href="mailto:rahimwrk@gmail.com">
+                                    <Mail className="h-5 w-5" />
+                                    <span className="sr-only">Email</span>
+                                </a>
                             </Button>
                         </div>
                     </div>
@@ -72,7 +74,7 @@ export function Footer() {
 
                 <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-muted-foreground">
-                        © {currentYear} Creative Developer. All rights reserved.
+                        © {currentYear} Arab Abderrahim. All rights reserved.
                     </p>
 
                     <Button

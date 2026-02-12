@@ -98,7 +98,9 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <div className="font-medium">Email</div>
-                                        <div className="text-muted-foreground">rahimwrk@gmail.com</div>
+                                        <a href="mailto:rahimwrk@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                                            rahimwrk@gmail.com
+                                        </a>
                                     </div>
                                 </div>
 
@@ -108,7 +110,9 @@ export function Contact() {
                                     </div>
                                     <div>
                                         <div className="font-medium">Linkedin</div>
-                                        <div className="text-muted-foreground">https://www.linkedin.com/in/abderrahim-arab-aa3183319/</div>
+                                        <a href="https://www.linkedin.com/in/abderrahim-arab-aa3183319/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                                            Abderrahim Arab
+                                        </a>
                                     </div>
                                 </div>
                             </div>
